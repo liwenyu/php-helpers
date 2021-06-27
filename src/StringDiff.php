@@ -86,24 +86,17 @@ class StringDiff
      */
     private static function formatContent($strings, $type = 1)
     {
-        $res = array_filter(preg_split('//u', $strings), 'filterFunction');
+        //array_filter 函数会去除值为 0 的,因此需要回调处理
+        $res = array_filter(preg_split('//u', $strings), function ($v) {
+            if ($v === '' || $v === null) {
+                return false;
+            }
+            return true;
+        }, ARRAY_FILTER_USE_BOTH);
+
         if ($type == self::STRING_TYPE) {
             return implode($res, '');
         }
         return array_merge($res, []);
-    }
-
-    /**
-     * 自定义过滤规则
-     *
-     * @param $arr
-     * @return bool
-     */
-    private static function filterFunction($arr)
-    {
-        if ($arr === '' || $arr === null) {
-            return false;
-        }
-        return true;
     }
 }

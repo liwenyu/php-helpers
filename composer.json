@@ -1,6 +1,7 @@
 {
   "name": "liwenyu/php-helpers",
   "description": "Match the difference between two strings",
+  "homepage": "https://github.com/liwenyu/php-helpers",
   "keywords": [
     "string",
     "diff"
@@ -18,7 +19,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "liwenyu\\phpHelpers\\\\": "/src"
+      "liwenyu\\PhpHelpers\\": "/src"
     }
   }
 }
