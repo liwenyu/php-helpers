@@ -1,0 +1,24 @@
+{
+  "name": "liwenyu/php-helpers",
+  "description": "Match the difference between two strings",
+  "keywords": [
+    "string",
+    "diff"
+  ],
+  "type": "library",
+  "require": {
+    "php": ">4.0"
+  },
+  "license": "Apache-2.0 License",
+  "authors": [
+    {
+      "name": "liwenyu",
+      "email": "liwenyu66@126.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "liwenyu\\phpHelpers\\\\": "/src"
+    }
+  }
+}
