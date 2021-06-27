@@ -32,18 +32,13 @@ $ composer require liwenyu/php-helpers
 //Load Composer's autoloader
 require 'vendor/autoload.php';
 
-$model = new \liwenyu\phpHelpers\StringDiff();
-$model->hendle();
-print_r($model->result);
+$template = '我爱你{a}，{b}';
+$content = '我爱你中国，你最棒';
+$result = \liwenyu\phpHelpers\StringDiff::getDiff($template, $content);
+print_r($result);
 Array
 (
     [{a}] => 中国
     [{b}] => 你最棒
 )
 ```
-
-## LICENSE
-
-![MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)
-
-
